@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transactions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>StockRoom</h2>
+        <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/ingredients.html">Ingredients</a></li>
+            <li><a href="/transactions.html">Transactions</a></li>
+            <li><a href="/alerts.html">Alerts</a></li>
+            <li><a href="/index.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Transactions</h1>
+
+        <div class="card">
+            <h2>Add / Update Transaction</h2>
+
+            <input type="hidden" id="transactionId">
+
+            <input type="number" id="transactionIngredientId" placeholder="Ingredient ID">
+
+            <input type="number" id="transactionStoreId" placeholder="Store ID">
+
+            <select id="transactionType">
+                <option value="RECEIVE">RECEIVE</option>
+                <option value="ISSUE">ISSUE</option>
+                <option value="WASTE">WASTE</option>
+                <option value="ADJUST">ADJUST</option>
+            </select>
+
+            <input type="number" id="transactionQuantity" placeholder="Quantity">
+
+            <button onclick="saveTransaction()">Save Transaction</button>
+        </div>
+
+        <div class="card">
+            <button onclick="getTransactions()">Load Transactions</button>
+            <div id="transactionList"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

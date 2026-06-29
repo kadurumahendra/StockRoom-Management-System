@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alerts</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>StockRoom</h2>
+        <ul>
+            <li><a href="/dashboard.html">Dashboard</a></li>
+            <li><a href="/ingredients.html">Ingredients</a></li>
+            <li><a href="/transactions.html">Transactions</a></li>
+            <li><a href="/alerts.html">Alerts</a></li>
+            <li><a href="/login.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Stock Alerts</h1>
+
+        <div class="card">
+            <input type="number" id="alertIngredientId" placeholder="Enter Ingredient ID">
+            <button onclick="checkAlert()">Check Alert</button>
+        </div>
+
+        <div class="card">
+            <div id="alertResult"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

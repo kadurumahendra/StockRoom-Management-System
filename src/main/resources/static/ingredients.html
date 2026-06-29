@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ingredients</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h2>StockRoom</h2>
+        <ul>
+			<li><a href="/dashboard.html">Dashboard</a></li>
+			            <li><a href="/ingredients.html">Ingredients</a></li>
+			            <li><a href="/transactions.html">Transactions</a></li>
+			            <li><a href="/alerts.html">Alerts</a></li>
+			            <li><a href="/login.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Ingredients</h1>
+
+        <div class="card">
+            <h2>Add / Update Ingredient</h2>
+
+            <input type="hidden" id="ingredientId">
+
+            <input type="text" id="name" placeholder="Ingredient Name">
+            <input type="number" id="quantity" placeholder="Quantity">
+            <input type="text" id="unit" placeholder="Unit">
+            <input type="number" id="parLevel" placeholder="Mininum Stock you need to maintain">
+
+            <button onclick="saveIngredient()">Save Ingredient</button>
+        </div>
+
+        <div class="card">
+            <button onclick="getIngredients()">Load Ingredients</button>
+            <div id="ingredientsList"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
